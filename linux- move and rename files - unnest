@@ -1,0 +1,6 @@
+# for loop to get the name of all sample folders and then take the identically
+# named quant files out and save them together in one folder with their individual sample names
+
+filenm=$(ls ./results_folder)
+for i in $filenm; do cp ./results_folder/$i/quant.sf ./quants/$i.sf; done
+
