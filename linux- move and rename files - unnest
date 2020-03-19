@@ -4,3 +4,6 @@
 filenm=$(ls ./results_folder)
 for i in $filenm; do cp ./results_folder/$i/quant.sf ./quants/$i.sf; done
 
+# more generic
+myfolders=$(ls)
+for folder in $myfolders; do myfiles=$(ls $folder); for file in $myfiles; do cp "$folder/$file" "$file"; done; done;
